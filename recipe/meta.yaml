@@ -18,6 +18,7 @@ source:
       - 204.patch
 
 build:
+  skip: yes  # [ppc64le]
   number: 4
 
 outputs:
