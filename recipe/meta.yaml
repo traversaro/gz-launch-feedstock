@@ -1,6 +1,6 @@
 {% set component_name = "launch" %}
 {% set repo_name = "gz-" + component_name %}
-{% set version = "6.0.0" %}
+{% set version = "6.1.0" %}
 {% set major_version = version.split('.')[0] %}
 {% set name = repo_name + major_version %}
 {% set component_version = component_name + major_version %}
@@ -12,14 +12,14 @@ package:
 
 source:
   - url: https://github.com/gazebosim/{{ repo_name }}/archive/{{ repo_name }}{{ major_version }}_{{ version }}.tar.gz
-    sha256: c824946435164fc0a342216c049a08f6dd5a12b8e1a5aec66b38b684bd968518
+    sha256: ad5356c23b58487f15367a0a60680b3a557b0fb235014e2cb579c49699fc63ed
     patches:
       - unvendor_backward.patch
       - 204.patch
 
 build:
   skip: yes  # [ppc64le]
-  number: 5
+  number: 0
 
 outputs:
   - name: {{ cxx_name }}
