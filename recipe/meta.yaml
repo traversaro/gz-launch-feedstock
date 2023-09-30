@@ -15,7 +15,6 @@ source:
     sha256: ad5356c23b58487f15367a0a60680b3a557b0fb235014e2cb579c49699fc63ed
     patches:
       - unvendor_backward.patch
-      - 204.patch
 
 build:
   skip: yes  # [ppc64le]
