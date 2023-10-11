@@ -45,18 +45,18 @@ outputs:
         - libgz-common5
         - libgz-plugin2
         - libgz-tools2
-        - libgz-transport12
-        - libgz-msgs9
+        - libgz-transport13
+        - libgz-msgs10
         - libgz-math7
-        - libgz-gui7
-        - libgz-sim7
+        - libgz-gui8
+        - libgz-sim8
         - backward-cpp
         - tinyxml2
         - qt-main
         - libwebsockets  # [linux]
         - libabseil
         - libprotobuf
-        - libsdformat13
+        - libsdformat14
         - xorg-libxfixes  # [linux]
         - elfutils  # [linux]
     test:
