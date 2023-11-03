@@ -19,7 +19,7 @@ elfutils:
 libabseil:
 - '20230802'
 libprotobuf:
-- 4.24.3
+- 4.24.4
 qt_main:
 - '5.15'
 target_platform:
