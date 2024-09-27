@@ -42,22 +42,22 @@ outputs:
         - {{ cdt('libxxf86vm') }}  # [linux]
         - {{ cdt('libxext') }}     # [linux]
       host:
-        - libgz-cmake3
-        - libgz-common5
-        - libgz-plugin2
+        - libgz-cmake4
+        - libgz-common6
+        - libgz-plugin3
         - libgz-tools2
-        - libgz-transport13
-        - libgz-msgs10
-        - libgz-math7
-        - libgz-gui8
-        - libgz-sim8
+        - libgz-transport14
+        - libgz-msgs11
+        - libgz-math8
+        - libgz-gui9
+        - libgz-sim9
         - backward-cpp
         - tinyxml2
         - qt-main
         - libwebsockets  # [linux]
         - libabseil
         - libprotobuf
-        - libsdformat14
+        - libsdformat15
         - xorg-libxfixes  # [linux]
         - elfutils  # [linux]
     test:
