@@ -27,6 +27,12 @@ outputs:
     build:
       run_exports:
         - {{ pin_subpackage(cxx_name, max_pin='x') }}
+      ignore_run_exports:
+        - python
+        - python_abi
+      ignore_run_exports_from:
+        - python
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     requirements:
       build:
         - {{ compiler('cxx') }}
@@ -41,6 +47,8 @@ outputs:
         - {{ cdt('libxdamage') }}  # [linux]
         - {{ cdt('libxxf86vm') }}  # [linux]
         - {{ cdt('libxext') }}     # [linux]
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
         - libgz-cmake4
         - libgz-common6
@@ -60,6 +68,7 @@ outputs:
         - libsdformat15
         - xorg-libxfixes  # [linux]
         - elfutils  # [linux]
+        - python
     test:
       commands:
         - test -f ${PREFIX}/include/gz/{{ component_version }}/gz/{{ component_name }}.hh  # [not win]
