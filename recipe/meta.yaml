@@ -12,13 +12,13 @@ package:
 
 source:
   - url: https://github.com/gazebosim/{{ repo_name }}/archive/{{ repo_name }}{{ major_version }}_{{ version }}.tar.gz
-    sha256: bbb08b057bf26f9f7997c104640714faf305d7ff1f291d35d9d2a80adef6701b
+    sha256: 627eab6312836dc90f3adbd70a63c37badf5b1dc982573b80657de5e8453de81
     patches:
       - unvendor_backward.patch
 
 build:
   skip: yes  # [ppc64le]
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ cxx_name }}
@@ -30,6 +30,7 @@ outputs:
     requirements:
       build:
         - {{ compiler('cxx') }}
+        - {{ stdlib('c') }}
         - {{ compiler('c') }}
         - ninja
         - cmake
