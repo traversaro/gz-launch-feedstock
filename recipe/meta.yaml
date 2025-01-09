@@ -18,7 +18,8 @@ source:
 
 build:
   skip: yes  # [ppc64le]
-  number: 5
+  skip: True  # [not is_python_min]
+  number: 6
 
 outputs:
   - name: {{ cxx_name }}
@@ -41,12 +42,6 @@ outputs:
         - ninja
         - cmake
         - pkg-config
-        - {{ cdt('mesa-libgl-devel') }}  # [linux]
-        - {{ cdt('mesa-dri-drivers') }}  # [linux]
-        - {{ cdt('libselinux') }}  # [linux]
-        - {{ cdt('libxdamage') }}  # [linux]
-        - {{ cdt('libxxf86vm') }}  # [linux]
-        - {{ cdt('libxext') }}     # [linux]
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
       host:
@@ -67,6 +62,7 @@ outputs:
         - libprotobuf
         - libsdformat15
         - xorg-libxfixes  # [linux]
+        - libgl-devel  # [linux]
         - elfutils  # [linux]
         - python
     test:
