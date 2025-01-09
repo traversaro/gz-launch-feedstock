@@ -18,6 +18,7 @@ source:
 
 build:
   skip: yes  # [ppc64le]
+  skip: True  # [not is_python_min]
   number: 6
 
 outputs:
@@ -63,8 +64,7 @@ outputs:
         - xorg-libxfixes  # [linux]
         - libgl-devel  # [linux]
         - elfutils  # [linux]
-        # We specify to use the python_min version so we avoid to create a job for each python version
-        - python {{ python_min }}
+        - python
     test:
       commands:
         - test -f ${PREFIX}/include/gz/{{ component_version }}/gz/{{ component_name }}.hh  # [not win]
