@@ -11,9 +11,9 @@ cxx_compiler:
 is_python_min:
 - 'true'
 libabseil:
-- '20240722'
+- '20250127'
 libprotobuf:
-- 5.28.3
+- 5.29.3
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -25,7 +25,7 @@ qt_main:
 target_platform:
 - win-64
 tinyxml2:
-- '10'
+- '10.0'
 zip_keys:
 - - python
   - is_python_min
