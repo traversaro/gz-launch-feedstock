@@ -21,15 +21,15 @@ docker_image:
 elfutils:
 - '0.192'
 libabseil:
-- '20240722'
+- '20250127'
 libprotobuf:
-- 5.28.3
+- 5.29.3
 qt_main:
 - '5.15'
 target_platform:
 - linux-aarch64
 tinyxml2:
-- '10'
+- '10.0'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
