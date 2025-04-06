@@ -19,7 +19,7 @@ source:
 build:
   skip: yes  # [ppc64le]
   skip: true  # [not is_python_min]
-  number: 0
+  number: 1
 
 outputs:
   - name: {{ cxx_name }}
