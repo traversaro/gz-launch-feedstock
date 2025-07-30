@@ -18,7 +18,7 @@ source:
 
 build:
   skip: yes  # [ppc64le]
-  number: 6
+  number: 7
 
 outputs:
   - name: {{ cxx_name }}
