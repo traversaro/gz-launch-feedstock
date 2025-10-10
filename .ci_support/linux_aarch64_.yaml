@@ -42,8 +42,8 @@ libprotobuf:
 - 6.31.1
 libsdformat:
 - '16'
-qt_main:
-- '5.15'
+qt6_main:
+- '6.9'
 target_platform:
 - linux-aarch64
 tinyxml2:
