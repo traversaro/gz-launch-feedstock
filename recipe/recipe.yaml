@@ -3,7 +3,7 @@ schema_version: 1
 context:
   component_name: launch
   repo_name: ${{ "gz-" ~ component_name }}
-  version: 8.0.1
+  version: "8.0.2"
   major_version: "8"
   name: ${{ repo_name ~ major_version }}
   component_version: ${{ component_name ~ major_version }}
@@ -15,15 +15,14 @@ recipe:
 
 source:
   - url: https://github.com/gazebosim/${{ repo_name }}/archive/${{ repo_name }}${{ major_version }}_${{ version }}.tar.gz
-    sha256: a6a6002cc904abbb9233510fc661b5a599d4eb3908783bc6da56070b30cd69bb
+    sha256: c386a8e650fb224cb6a18416b9d05fbfddde02c4543f5341946433ff327c993d
     patches:
       - unvendor_backward.patch
-      - 299.patch
 
 build:
   skip:
     - ppc64le
-  number: 3
+  number: 0
 
 outputs:
   - package:
