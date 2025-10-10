@@ -53,7 +53,7 @@ outputs:
         - libgz-sim
         - backward-cpp
         - tinyxml2
-        - qt-main
+        - qt6-main
         - if: linux
           then:
             - libwebsockets
