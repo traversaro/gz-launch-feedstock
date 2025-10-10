@@ -74,8 +74,8 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-gz--launch9-green.svg)](https://anaconda.org/conda-forge/gz-launch9) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gz-launch9.svg)](https://anaconda.org/conda-forge/gz-launch9) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gz-launch9.svg)](https://anaconda.org/conda-forge/gz-launch9) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gz-launch9.svg)](https://anaconda.org/conda-forge/gz-launch9) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libgz--launch9-green.svg)](https://anaconda.org/conda-forge/libgz-launch9) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgz-launch9.svg)](https://anaconda.org/conda-forge/libgz-launch9) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgz-launch9.svg)](https://anaconda.org/conda-forge/libgz-launch9) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgz-launch9.svg)](https://anaconda.org/conda-forge/libgz-launch9) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-gz--launch-green.svg)](https://anaconda.org/conda-forge/gz-launch) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gz-launch.svg)](https://anaconda.org/conda-forge/gz-launch) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gz-launch.svg)](https://anaconda.org/conda-forge/gz-launch) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gz-launch.svg)](https://anaconda.org/conda-forge/gz-launch) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libgz--launch-green.svg)](https://anaconda.org/conda-forge/libgz-launch) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgz-launch.svg)](https://anaconda.org/conda-forge/libgz-launch) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgz-launch.svg)](https://anaconda.org/conda-forge/libgz-launch) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgz-launch.svg)](https://anaconda.org/conda-forge/libgz-launch) |
 
 Installing gz-launch
 ====================
@@ -87,41 +87,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `gz-launch9, libgz-launch9` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `gz-launch, libgz-launch` can be installed with `conda`:
 
 ```
-conda install gz-launch9 libgz-launch9
-```
-
-or with `mamba`:
-
-```
-mamba install gz-launch9 libgz-launch9
-```
-
-It is possible to list all of the versions of `gz-launch9` available on your platform with `conda`:
-
-```
-conda search gz-launch9 --channel conda-forge
+conda install gz-launch libgz-launch
 ```
 
 or with `mamba`:
 
 ```
-mamba search gz-launch9 --channel conda-forge
+mamba install gz-launch libgz-launch
+```
+
+It is possible to list all of the versions of `gz-launch` available on your platform with `conda`:
+
+```
+conda search gz-launch --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search gz-launch --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search gz-launch9 --channel conda-forge
+mamba repoquery search gz-launch --channel conda-forge
 
-# List packages depending on `gz-launch9`:
-mamba repoquery whoneeds gz-launch9 --channel conda-forge
+# List packages depending on `gz-launch`:
+mamba repoquery whoneeds gz-launch --channel conda-forge
 
-# List dependencies of `gz-launch9`:
-mamba repoquery depends gz-launch9 --channel conda-forge
+# List dependencies of `gz-launch`:
+mamba repoquery depends gz-launch --channel conda-forge
 ```
 
 
