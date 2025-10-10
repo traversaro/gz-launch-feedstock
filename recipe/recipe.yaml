@@ -18,7 +18,6 @@ source:
     sha256: c386a8e650fb224cb6a18416b9d05fbfddde02c4543f5341946433ff327c993d
     patches:
       - unvendor_backward.patch
-      - 299.patch
 
 build:
   skip:
