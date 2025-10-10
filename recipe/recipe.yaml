@@ -7,7 +7,7 @@ context:
   major_version: "9"
   name: ${{ repo_name ~ major_version }}
   component_version: ${{ component_name ~ major_version }}
-  cxx_name: ${{ "lib" + name }}
+  cxx_name: ${{ "lib" ~ name }}
 
 recipe:
   name: ${{ name }}
