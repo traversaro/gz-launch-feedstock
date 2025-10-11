@@ -98,6 +98,35 @@ outputs:
       #      - ${{ compiler('c') }}
       #      - ${{ compiler('cxx') }}
 
+  # The gz-jetty output has different versioning from the other outputs of the feedstocks
+  - package:
+      name: gz-jetty
+      version: 1.0.0
+    build:
+      number: 0
+    requirements:
+      # See https://github.com/gazebo-tooling/gazebodistro/blob/680c7f921d7c05ea89742cf9f6e3c6e669ada291/collection-jetty.yaml
+      run:
+        - gz-cmake 5.*
+        - gz-common 7.*
+        - gz-fuel-tools 11.*
+        - gz-sim 10.*
+        - gz-gui 10.*
+        - gz-launch 9.*
+        - gz-math 9.*
+        - gz-msgs 12.*
+        - gz-physics 9.*
+        - gz-plugin 4.*
+        - gz-rendering 10.*
+        - gz-sensors 10.*
+        - gz-tools 2.*
+        - gz-transport 15.*
+        - gz-utils 4.*
+        - sdformat 16.*
+    tests:
+      - script:
+           - echo "Metapackage, no test needed"
+
 about:
   homepage: https://github.com/gazebosim/${{ repo_name }}
   license: Apache-2.0
