@@ -182,7 +182,7 @@ outputs:
         - gz-launch 7.*
         - gz-math 7.*
         - gz-msgs 10.*
-        - gz-physics 7
+        - gz-physics 7.*
         - gz-plugin 2.*
         - gz-rendering 8.*
         - gz-sensors 8.*
