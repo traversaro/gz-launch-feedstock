@@ -74,6 +74,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-gz--jetty-green.svg)](https://anaconda.org/conda-forge/gz-jetty) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gz-jetty.svg)](https://anaconda.org/conda-forge/gz-jetty) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gz-jetty.svg)](https://anaconda.org/conda-forge/gz-jetty) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gz-jetty.svg)](https://anaconda.org/conda-forge/gz-jetty) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-gz--launch-green.svg)](https://anaconda.org/conda-forge/gz-launch) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gz-launch.svg)](https://anaconda.org/conda-forge/gz-launch) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gz-launch.svg)](https://anaconda.org/conda-forge/gz-launch) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gz-launch.svg)](https://anaconda.org/conda-forge/gz-launch) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-libgz--launch-green.svg)](https://anaconda.org/conda-forge/libgz-launch) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgz-launch.svg)](https://anaconda.org/conda-forge/libgz-launch) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgz-launch.svg)](https://anaconda.org/conda-forge/libgz-launch) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgz-launch.svg)](https://anaconda.org/conda-forge/libgz-launch) |
 
@@ -87,41 +88,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `gz-launch, libgz-launch` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `gz-jetty, gz-launch, libgz-launch` can be installed with `conda`:
 
 ```
-conda install gz-launch libgz-launch
-```
-
-or with `mamba`:
-
-```
-mamba install gz-launch libgz-launch
-```
-
-It is possible to list all of the versions of `gz-launch` available on your platform with `conda`:
-
-```
-conda search gz-launch --channel conda-forge
+conda install gz-jetty gz-launch libgz-launch
 ```
 
 or with `mamba`:
 
 ```
-mamba search gz-launch --channel conda-forge
+mamba install gz-jetty gz-launch libgz-launch
+```
+
+It is possible to list all of the versions of `gz-jetty` available on your platform with `conda`:
+
+```
+conda search gz-jetty --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search gz-jetty --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search gz-launch --channel conda-forge
+mamba repoquery search gz-jetty --channel conda-forge
 
-# List packages depending on `gz-launch`:
-mamba repoquery whoneeds gz-launch --channel conda-forge
+# List packages depending on `gz-jetty`:
+mamba repoquery whoneeds gz-jetty --channel conda-forge
 
-# List dependencies of `gz-launch`:
-mamba repoquery depends gz-launch --channel conda-forge
+# List dependencies of `gz-jetty`:
+mamba repoquery depends gz-jetty --channel conda-forge
 ```
 
 
