@@ -171,6 +171,35 @@ outputs:
               - if not exist %PREFIX%\\Library\\bin\\${{ name }}.dll exit 1
               - if not exist %PREFIX%\\Library\\lib\\cmake\\${{ name }}\\${{ name }}-config.cmake exit 1
 
+  # The gz-ionic output has different versioning from the other outputs of the feedstocks
+  - package:
+      name: gz-ionic
+      version: 1.0.0
+    build:
+      number: 0
+    requirements:
+      # Based on collection-ionic.yaml (Ionic release mapping)
+      run:
+        - gz-cmake 4.*
+        - gz-common 6.*
+        - gz-fuel-tools 10.*
+        - gz-sim 9.*
+        - gz-gui 9.*
+        - gz-launch 8.*
+        - gz-math 8.*
+        - gz-msgs 11.*
+        - gz-physics 8
+        - gz-plugin 3.*
+        - gz-rendering 9.*
+        - gz-sensors 9.*
+        - gz-tools 2.*
+        - gz-transport 14.*
+        - gz-utils 3.*
+        - sdformat 15.*
+    tests:
+      - script:
+          - echo "Metapackage, no test needed"
+
 about:
   homepage: https://github.com/gazebosim/${{ repo_name }}
   license: Apache-2.0
